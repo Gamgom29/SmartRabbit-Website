@@ -1,7 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { HomeComponent } from './components/home/home.component';
+import { BlankLayoutComponent } from './components/blank-layout/blank-layout.component';
+import { AuthLayoutComponent } from './components/auth-layout/auth-layout.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  {
+    path:'' , component: BlankLayoutComponent,
+    children:[
+    {path:'home' , component: HomeComponent}
+    ]
+  },
+  {
+    path:'', component:AuthLayoutComponent,
+    children:[
+      {path:'login' , component: LoginComponent},
+      {path:'register' , component: RegisterComponent}
+    ]
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

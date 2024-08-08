@@ -2,3 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "primeicons/primeicons.css";
+@import 'ngx-toastr/toastr';
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
