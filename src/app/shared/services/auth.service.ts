@@ -12,4 +12,8 @@ export class AuthService {
   register(model:object):Observable<any>{
     return this._HttpClient.post(`${environment.baseUrl}/customers/signup`,model);
   }
+
+  login(model:object):Observable<any>{
+    return this._HttpClient.post(`${environment.baseUrl}/customers/login`,model);
+  }
 }
